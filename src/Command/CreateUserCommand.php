@@ -70,7 +70,7 @@ class CreateUserCommand extends Command
         $users = $this->em->getRepository(User::class)->findAll();
         
         if($users) {
-            $output->writeln(count($users) . ' users found');
+            $output->writeln('User already exist !');
             return Command::FAILURE;
         }
 
